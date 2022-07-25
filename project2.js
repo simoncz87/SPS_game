@@ -1,3 +1,16 @@
+/*
+How many hours did you spend on this assignment?: 5+ hours
+
+What part of the assignment did you spend the most time on?: Assigning each function
+
+How comfortable did you feel with this assignment? (1-5): 3
+
+Is there anything in this code that you feel pleased about?: When it finally worked
+
+What's one aspect of your code you would like specific, elaborate feedback on?: Too much assigning i guess, probably there is a shorter way to go about it
+*/
+
+
 // SPS - (winning conditions) scissors beats paper, paper beats rock, rock beats scissors
 // to assign each variable
 
