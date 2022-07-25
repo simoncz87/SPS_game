@@ -131,7 +131,7 @@ var assignItem = function (object) {
   if (object == STN || object == R_STN) return " 🪨 ";
 };
 
-//  creating a message together with a picture
+//  creating a message together with a picture (including assignItem function)
 
 var itemMsg = function (player, computer) {
   var playerItem = assignItem(player);
@@ -143,20 +143,6 @@ var itemMsg = function (player, computer) {
     " You chose " +
     player +
     playerItem
-  );
-};
-
-//  default win/lose message
-
-var defaultWinLoseMsg = function () {
-  return (
-    userName +
-    ": " +
-    numPlayerWin +
-    " | Computer: " +
-    numComputerWin +
-    " | Draws; " +
-    numDraw
   );
 };
 
@@ -199,16 +185,31 @@ var playingInstructions = function () {
   return playInstruction + SCR + ", " + PAP + ", or " + STN + ".";
 };
 
-// message after each round ends
+//  default win/lose message (this will be attached to the end game message)
+
+var defaultWinLoseMsg = function () {
+  return (
+    userName +
+    ": " +
+    numPlayerWin +
+    " | Computer: " +
+    numComputerWin +
+    " | Draws; " +
+    numDraw
+  );
+};
+
+// message after each round ends to select another option
 
 var endGameMsg = function (outcome, before) {
-  var instruction = " Type 'scissors', 'paper', 'stone' to play another round! ";
+  var instruction =
+    " Type 'scissors', 'paper', 'stone' to play another round! ";
   if (gmode == R_SPS) {
     instruction =
       " Type 'reverse scissors', 'reverse paper', 'reverse stone' to play another round! ";
   }
 
-  // create a message for each outcome
+  // create a message for each outcome (to add on the defaultWinLoseMsg counter function in an outcome)
 
   if (outcome == WIN) {
     return before + userName + " wins! " + instruction + defaultWinLoseMsg();
@@ -222,6 +223,17 @@ var endGameMsg = function (outcome, before) {
 };
 
 // to write out main function
+// key functions
+// itemRoll = computers choice
+// playerWin = conditions when a player wins
+// playerDrawCom = conditions when a draw is in place
+// assignItem = assigning an object to the word
+// itemMsg = message will also show an object
+// gameItemInput = to validate the right item input
+// gameModeinput = to validate the right game mode input
+// responseInvalidInput = in the event if an input is wrong
+// playingInstructions = to be used after inputting user name and game mode
+// endGameMsg = to be used as a win/lose/draw counter
 
 var main = function (input) {
   if (!userName) {
