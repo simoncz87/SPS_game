@@ -7,7 +7,7 @@ How comfortable did you feel with this assignment? (1-5): 2.5
 
 Is there anything in this code that you feel pleased about?: When you get it to actually work, extremely satisfying
 
-What's one aspect of your code you would like specific, elaborate feedback on?: After typing in quite a lot and assigning each var and function, it gets a bit hard to track. Will have to work out producing a shorter way to do it...
+What's one aspect of your code you would like specific, elaborate feedback on?: After typing in quite a lot and assigning each var and function, it gets a bit hard to track. Had to use reference for a bit of help when the code couldn't work out...
 
 */
 
