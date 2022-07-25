@@ -146,30 +146,10 @@ var itemMsg = function (player, computer) {
   );
 };
 
-// create a input validation for each item used
-
-var gameItemInput = function (userInput) {
-  if (gmode == R_SPS) {
-    return userInput == R_SCR || userInput == R_PAP || userInput == R_STN;
-  }
-  return userInput == SCR || userInput == PAP || userInput == STN;
-};
-
 // create a input validation for the different game mode
 
 var gameModeInput = function (userInput) {
   return userInput == Normal || userInput == R_SPS;
-};
-
-//  create a response for invalid input
-
-var responseInvalidInput = function () {
-  if (gmode == R_SPS) {
-    return (
-      "input 1 of " + R_SCR + ", " + R_PAP + ", " + R_STN + " to play the game"
-    );
-  }
-  return "input 1 of " + SCR + "," + PAP + ", " + STN + " to play the game";
 };
 
 // instructions before playing
@@ -185,9 +165,9 @@ var playingInstructions = function () {
   return playInstruction + SCR + ", " + PAP + ", or " + STN + ".";
 };
 
-//  default win/lose message (this will be attached to the end game message)
+//  win/lose/draw message (this will be attached to the end game message)
 
-var defaultWinLoseMsg = function () {
+var winLoseDrawMsg = function () {
   return (
     userName +
     ": " +
@@ -209,16 +189,16 @@ var endGameMsg = function (outcome, before) {
       " Type 'reverse scissors', 'reverse paper', 'reverse stone' to play another round! ";
   }
 
-  // create a message for each outcome (to add on the defaultWinLoseMsg counter function in an outcome)
+  // create a message for each outcome (to add on the winLoseDrawMsg counter function in an outcome)
 
   if (outcome == WIN) {
-    return before + userName + " wins! " + instruction + defaultWinLoseMsg();
+    return before + userName + " wins! " + instruction + winLoseDrawMsg();
   }
   if (outcome == LOSE) {
-    return before + userName + " lose! " + instruction + defaultWinLoseMsg();
+    return before + userName + " lose! " + instruction + winLoseDrawMsg();
   }
   if (outcome == DRAW) {
-    return before + userName + " draw! " + instruction + defaultWinLoseMsg();
+    return before + userName + " draw! " + instruction + winLoseDrawMsg();
   }
 };
 
@@ -229,9 +209,7 @@ var endGameMsg = function (outcome, before) {
 // playerDrawCom = conditions when a draw is in place
 // assignItem = assigning an object to the word
 // itemMsg = message will also show an object
-// gameItemInput = to validate the right item input
 // gameModeinput = to validate the right game mode input
-// responseInvalidInput = in the event if an input is wrong
 // playingInstructions = to be used after inputting user name and game mode
 // endGameMsg = to be used as a win/lose/draw counter
 
