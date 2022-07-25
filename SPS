@@ -1,13 +1,13 @@
 /*
-How many hours did you spend on this assignment?: 3 hours
+How many hours did you spend on this assignment?: 4+ hours
 
-What part of the assignment did you spend the most time on?: trying to assign each function
+What part of the assignment did you spend the most time on?: Trying to assign each function
 
-How comfortable did you feel with this assignment? (1-5): 3
+How comfortable did you feel with this assignment? (1-5): 2.5
 
 Is there anything in this code that you feel pleased about?: When you get it to actually work, extremely satisfying
 
-What's one aspect of your code you would like specific, elaborate feedback on?: After typing in quite a lot, it gets a bit hard to track, coming up with names can get confusing along the way...
+What's one aspect of your code you would like specific, elaborate feedback on?: After typing in quite a lot and assigning each var and function, it gets a bit hard to track. Will have to work out producing a shorter way to do it...
 
 */
 
