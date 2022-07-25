@@ -60,7 +60,7 @@ var numDraw = 0;
 
 // to return item options for scissors/paper/stone similar to dice roll
 
-var itemRoll = function () {
+var comRoll = function () {
   var randomItem = Math.floor(Math.random() * 3);
 
   if (randomItem == 0) {
@@ -224,7 +224,7 @@ var endGameMsg = function (outcome, before) {
 
 // to write out main function
 // key functions
-// itemRoll = computers choice
+// comRoll = computers choice
 // playerWin = conditions when a player wins
 // playerDrawCom = conditions when a draw is in place
 // assignItem = assigning an object to the word
@@ -265,7 +265,7 @@ var main = function (input) {
   // players input
   var player = input;
   // computers answer
-  var computer = itemRoll();
+  var computer = comRoll();
   // message of what both players objects are
   var firstObjMsg = itemMsg(player, computer);
 
